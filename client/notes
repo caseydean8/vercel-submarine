@@ -1,0 +1,6 @@
+moved react-scripts to devDependencies in package.json, may need to be moved out for deployment
+
+To deploy,
+heroku login
+in the terminal, sign in with browser
+git push heroku master

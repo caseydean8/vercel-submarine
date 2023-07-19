@@ -1,0 +1,50 @@
+{
+  "name": "subscription-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "engines": {
+    "node": "16.x"
+  },
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caseydean8/submarine"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "nodemon": "^1.18.7"
+  },
+  "bugs": {
+    "url": "https://github.com/caseydean8/submarine/issues"
+  },
+  "homepage": "https://blooming-peak-13476.herokuapp.com/",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.6.0",
+    "express": "^4.17.1",
+    "express-passport": "^0.1.0",
+    "express-session": "^1.17.2",
+    "express-winston": "^4.1.0",
+    "if-env": "^1.0.4",
+    "mongojs": "^2.6.0",
+    "mongoose": "^5.12.12",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "react-router-dom": "^5.1.2",
+    "serve": "^11.3.2",
+    "winston": "^3.3.3"
+  }
+}

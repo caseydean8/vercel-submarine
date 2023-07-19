@@ -1,0 +1,15 @@
+#center {
+    font-size: 2.2rem;
+}
+
+@media (max-width: 993px) {
+    #center {
+        font-size: 1.625rem;
+    }
+}
+
+@media (max-width: 767px) {
+    #center {
+        font-size: 1.16875rem;
+    }
+}
